@@ -12,9 +12,9 @@ func main() {
 }
 
 func sameAlphabets(inputs string) string {
-    newS := ""
-    taken := make(map[rune]int)
-    for _, value := range inputs {
+	newS := ""
+	taken := make(map[rune]int)
+	for _, value := range inputs {
 
 		if vowellValid(string(value)) == 1 {
 
@@ -26,10 +26,10 @@ func sameAlphabets(inputs string) string {
 			taken[value] = 1
 			newS += string(value)
 		}
-		
+
 	}
-    
-    // fmt.Println(newS)
+
+	// fmt.Println(newS)
 	return newS
 }
 
@@ -46,7 +46,6 @@ func vowellValid(inputs string) int {
 
 func questA(inputs string) {
 
-
 	// split data into per alphabets
 	splited := strings.Split(sameAlphabets(inputs), "")
 
@@ -59,12 +58,12 @@ func questA(inputs string) {
 		} else {
 			countnonVowell++
 		}
-		
+
 	}
 
 	converterA := strconv.Itoa(countVowell)
 	converterB := strconv.Itoa(countnonVowell)
-	
+
 	fmt.Println("Jumlah Huruf Hidup", converterA)
 	fmt.Println("Jumlah Huruf Mati", converterB)
 
